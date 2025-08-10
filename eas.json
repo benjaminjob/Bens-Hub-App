@@ -20,6 +20,14 @@
       "ios": {
         "resourceClass": "m-medium"
       }
+    },
+    "app-clip": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium",
+        "buildConfiguration": "Release",
+        "simulator": false
+      }
     }
   },
   "submit": {

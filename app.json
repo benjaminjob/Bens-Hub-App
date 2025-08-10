@@ -36,6 +36,24 @@
         "projectId": "your-project-id"
       }
     },
-    "owner": "your-expo-username"
+    "owner": "your-expo-username",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "appClip": {
+      "bundleIdentifier": "com.vibecode.app.clip",
+      "entitlements": {
+        "com.apple.developer.parent-application-identifiers": [
+          "$(AppIdentifierPrefix)com.vibecode.app"
+        ]
+      }
+    }
   }
 }
