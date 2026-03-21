@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^1.2.0",
     "expo": "^53.0.20",
     "expo-build-properties": "^0.14.8",
