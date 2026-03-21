@@ -7,11 +7,54 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "platforms": ["ios", "android", "web"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vibecode.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "CFBundleDisplayName": "VibeCode",
+        "CFBundleName": "VibeCode",
+        "NSCameraUsageDescription": "This app needs access to camera to take photos and videos.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photos to select images.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to provide location-based services.",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone to record audio.",
+        "NSFaceIDUsageDescription": "This app uses Face ID for secure authentication.",
+        "UIBackgroundModes": ["background-fetch", "remote-notification"]
+      },
+      "entitlements": {
+        "com.apple.developer.team-identifier": "YOUR_TEAM_ID",
+        "com.apple.developer.aps-environment": "development"
+      }
     },
     "android": {
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.vibecode.app",
+      "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    },
+    "owner": "your-expo-username",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "appClip": {
+      "bundleIdentifier": "com.vibecode.app.clip",
+      "entitlements": {
+        "com.apple.developer.parent-application-identifiers": [
+          "$(AppIdentifierPrefix)com.vibecode.app"
+        ]
+      }
     }
   }
 }
