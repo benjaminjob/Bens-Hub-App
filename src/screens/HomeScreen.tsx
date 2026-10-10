@@ -105,7 +105,7 @@ const HomeScreen = ({ navigation }: Props) => {
   
   const shouldShowProjects = showWorkInProgress && projectItems.length > 0;
 
-  const handlePress = (item: typeof webProperties[0]) => {
+  const handlePress = (item: { url: string; title: string }) => {
     navigation.navigate('WebView', { url: item.url, title: item.title });
   };
 
